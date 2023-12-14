@@ -11,21 +11,6 @@ def main():
     args = parser.parse_args()
 
     token_string = args.token_string
-    pushplus_token = os.environ.get('PUSHPLUS_TOKEN')
-    serverChan_sendkey = os.environ.get('SERVERCHAN_SENDKEY')
-    weCom_tokens = os.environ.get('WECOM_TOKENS')
-    weCom_webhook = os.environ.get('WECOM_WEBHOOK')
-    bark_deviceKey = os.environ.get('BARK_DEVICEKEY')
-    feishu_deviceKey = os.environ.get('FEISHU_DEVICEKEY')
-
-    message_tokens = {
-        'pushplus_token': pushplus_token,
-        'serverChan_token': serverChan_sendkey,
-        'weCom_tokens': weCom_tokens,
-        'weCom_webhook': weCom_webhook,
-        'bark_deviceKey': bark_deviceKey,
-        'feishu_deviceKey': feishu_deviceKey,
-    }
 
     token_string = token_string.split(',')
     ali = Aliyundrive()
@@ -43,7 +28,7 @@ def main():
     message_all = re.sub('\n+', '\n', message_all).rstrip('\n')
 
     message_send = MessageSend()
-    message_send.send_all(message_tokens, title, message_all)
+    message_send.tgbot(title, message_all)
 
     print('finish')
 
