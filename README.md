@@ -36,3 +36,6 @@
 - [https://alist.nn.ci/zh/guide/drivers/aliyundrive.html](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)
 
 # 如侵权请联系本人删除
+## 以上为原作者内容
+1.删除了代码中的所有推送内容，添加了TG BOT推送  
+2.使用**USERID**和**BOTID**驱动TGBot
